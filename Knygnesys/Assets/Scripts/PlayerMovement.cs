@@ -2,11 +2,17 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+     
    private Rigidbody2D body;
    [SerializeField]private float speed;
    [SerializeField]private float jump;
    private Vector3 localScale;
    private bool isJumping;
+   
+   //animacija start
+   public Animator animator;
+   private bool m_FacingLeft = true;
+   //animacija end
 
    private float dirX;
 
@@ -37,11 +43,26 @@ public class PlayerMovement : MonoBehaviour
    private void Update()
    {
         body.velocity = new Vector2(0, body.velocity.y);
+     //animacijai
+        // If the input is moving the player right and the player is facing left...
+			if (dirX*speed > 0 && m_FacingLeft)
+			{
+				// ... flip the player.
+				Flip();
+			}
+			// Otherwise if the input is moving the player left and the player is facing right...
+			else if (dirX*speed < 0 && !m_FacingLeft)
+			{
+				// ... flip the player.
+				Flip();
+			}
+     //animaicijai end
 
         if(Input.GetKey(KeyCode.Space) && !isJumping)
         {
             body.velocity = new Vector2(body.velocity.x, jump);
             isJumping = true;
+            animator.SetBool("IsJumping", true); //animacijai
         }
    }
 
@@ -50,6 +71,18 @@ public class PlayerMovement : MonoBehaviour
         if(other.gameObject.CompareTag("Ground"))
         {
             isJumping = false;
+            animator.SetBool("IsJumping", false); //animacijai
         }
    }
+
+   private void Flip()
+	{
+		// Switch the way the player is labelled as facing.
+		m_FacingLeft = !m_FacingLeft;
+
+		// Multiply the player's x local scale by -1.
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
+	}
 }
