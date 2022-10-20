@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
    private bool isJumping;
 
-   private float fallMultiplier = 2.5f;
+   private float fallMultiplier = 3f;
    private float lowJumpMultiplier = 2f;
    
    //animacija start
