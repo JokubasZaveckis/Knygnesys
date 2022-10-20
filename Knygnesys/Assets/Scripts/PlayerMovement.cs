@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -7,7 +8,11 @@ public class PlayerMovement : MonoBehaviour
    [SerializeField]private float speed;
    [SerializeField]private float jump;
    private Vector3 localScale;
+
    private bool isJumping;
+
+   private float fallMultiplier = 2.5f;
+   private float lowJumpMultiplier = 2f;
    
    //animacija start
    public Animator animator;
@@ -38,11 +43,21 @@ public class PlayerMovement : MonoBehaviour
    void FixedUpdate()
    {
         body.velocity = new Vector2(dirX*speed, body.velocity.y);
+
+        if (body.velocity.y < 0) //jump'o feel pagerinimas (+- i mario games puse): 14-15, 47-54
+        {
+            body.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        }
+        else if (body.velocity.y > 0 && !Input.GetButton ("Jump"))
+        {
+            body.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        }
    }
 
    private void Update()
    {
         body.velocity = new Vector2(0, body.velocity.y);
+
      //animacijai
         // If the input is moving the player right and the player is facing left...
 			if (dirX*speed > 0 && m_FacingLeft)
@@ -64,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true;
             animator.SetBool("IsJumping", true); //animacijai
         }
+
    }
 
    void OnCollisionEnter2D(Collision2D other)
