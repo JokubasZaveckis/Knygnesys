@@ -30,14 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
    private void OnTriggerEnter2D(Collider2D collision)
    {
-        if(collision.GetComponent<Wall>())
-        {
-            dirX *=-1f;
-        }
-        if(collision.GetComponent<Wall2>())
-        {
-            dirX *=-1f;
-        }
+        dirX *=-1f;
    }
    
    void FixedUpdate()
@@ -73,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
 			}
      //animaicijai end
 
-        if(Input.GetKey(KeyCode.Space) && !isJumping)
+        if(Input.GetKey(KeyCode.Space) /*&& !isJumping*/)
         {
             body.velocity = new Vector2(body.velocity.x, jump);
             isJumping = true;
