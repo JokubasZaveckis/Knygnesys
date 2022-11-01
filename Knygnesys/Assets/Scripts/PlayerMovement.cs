@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
 			}
      //animaicijai end
 
-        if(Input.GetKey(KeyCode.Space) /*&& !isJumping*/)
+        if(Input.GetKey(KeyCode.Space) && !isJumping)
         {
             body.velocity = new Vector2(body.velocity.x, jump);
             isJumping = true;

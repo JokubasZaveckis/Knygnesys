@@ -26,7 +26,7 @@ public class Camera : MonoBehaviour
         //background
         if(target.position.y >= bg2.position.y+1)
         {
-            bg1.position = new Vector3(bg1.position.x, bg2.position.y+40, bg1.position.z);
+            bg1.position = new Vector3(bg1.position.x, bg2.position.y+39, bg1.position.z);
             SwitchBg();
         }
 
