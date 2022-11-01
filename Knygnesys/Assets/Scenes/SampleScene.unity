@@ -339,7 +339,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 731827726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.254303, y: 0, z: 0}
+  m_LocalPosition: {x: 1.254303, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -516,6 +516,7 @@ MonoBehaviour:
   levelPart_Start: {fileID: 38904379}
   levelPartList:
   - {fileID: 551511012013420807, guid: fb4e027f7e148394aabf3b8a695b686a, type: 3}
+  - {fileID: 3476220645567122607, guid: 5b12f825971312d458102fa03b26ae8e, type: 3}
   player: {fileID: 2044048819}
 --- !u!4 &1222759349
 Transform:
