@@ -19,7 +19,7 @@ public class LevelGenerator : MonoBehaviour
         
 
         int startingPawnLevelParts = 5;
-        for(int i=0; i<startingPawnLevelParts; i++)
+        for(int i=0; i<startingPawnLevelParts; i++) //sugeneruoja pradiniu leveliu skaiciu
         {
             SpawnLevelPart();
         }
@@ -28,7 +28,7 @@ public class LevelGenerator : MonoBehaviour
 
     private void Update()
     {
-        if(Vector3.Distance(player.position, lastEndPosition)<PLAYER_DISTANCE_SPAWN_LEVEL_PART)
+        if(Vector3.Distance(player.position, lastEndPosition)<PLAYER_DISTANCE_SPAWN_LEVEL_PART) //kai veikejas priarteja prie kintamojo PLAYER_DISTANCE_SPAWN_LEVEL_PART reiksmes atspawnina dar viena random lygi
         {
             SpawnLevelPart();
         } 
@@ -36,14 +36,14 @@ public class LevelGenerator : MonoBehaviour
 
     private void SpawnLevelPart()
     { 
-        Transform chosenLevelPart = levelPartList[Random.Range(0, levelPartList.Count)];
-        Transform lastLevelPartTransform = SpawnLevelPart(chosenLevelPart, lastEndPosition);
-        lastEndPosition = lastLevelPartTransform.Find("EndPosition").position;
+        Transform chosenLevelPart = levelPartList[Random.Range(0, levelPartList.Count)]; //parenka random lygi
+        Transform lastLevelPartTransform = SpawnLevelPart(chosenLevelPart, lastEndPosition); //randa kokiam aukstyje deti sekanti lygi
+        lastEndPosition = lastLevelPartTransform.Find("EndPosition").position; //randa paskutinio levelio baigimosi vieta
     }
 
     private Transform SpawnLevelPart(Transform levelPart, Vector3 spawnPosition)
     { 
-        Transform levelPartTransfrom = Instantiate(levelPart, spawnPosition, Quaternion.identity);
-        return levelPartTransfrom;
+        Transform levelPartTransfrom = Instantiate(levelPart, spawnPosition, Quaternion.identity); //atspawnina nauja lygi
+        return levelPartTransfrom; //grazina lygio auksti
     }
 }

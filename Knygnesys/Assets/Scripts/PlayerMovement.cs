@@ -23,19 +23,19 @@ public class PlayerMovement : MonoBehaviour
 
    private void Awake()
    {
-        body = GetComponent<Rigidbody2D>();
+        body = GetComponent<Rigidbody2D>(); //pasiima veikeja
         localScale = transform.localScale;
-        dirX = 1F;
+        dirX = 1F; //nustato judejimo krypi pradzioje
    }
 
    private void OnTriggerEnter2D(Collider2D collision)
    {
-        dirX *=-1f;
+        dirX *=-1f; //kai paliecia siena keicia krypti
    }
    
    void FixedUpdate()
    {
-        body.velocity = new Vector2(dirX*speed, body.velocity.y);
+        body.velocity = new Vector2(dirX*speed, body.velocity.y); //nustato greiti ir sokimo auksti
 
         if (body.velocity.y < 0) //jump'o feel pagerinimas (+- i mario games puse): 14-15, 47-54
         {
@@ -66,10 +66,10 @@ public class PlayerMovement : MonoBehaviour
 			}
      //animaicijai end
 
-        if(Input.GetKey(KeyCode.Space) && !isJumping)
+        if(Input.GetKey(KeyCode.Space) && !isJumping) //jei paspaudzia space
         {
-            body.velocity = new Vector2(body.velocity.x, jump);
-            isJumping = true;
+            body.velocity = new Vector2(body.velocity.x, jump); //veikejas kyla i virsu
+            isJumping = true; //pakeicia busena kad veikejas yra ore (tam kad negaletu spammint space)
             animator.SetBool("IsJumping", true); //animacijai
         }
 
@@ -77,9 +77,9 @@ public class PlayerMovement : MonoBehaviour
 
    void OnCollisionEnter2D(Collision2D other)
    {
-        if(other.gameObject.CompareTag("Ground"))
+        if(other.gameObject.CompareTag("Ground")) //jei paliecia zeme
         {
-            isJumping = false;
+            isJumping = false; // pakeicia busena kai veikejas nusileidzia ant zemes (tam kad negaletu spammint space)
             animator.SetBool("IsJumping", false); //animacijai
         }
    }
