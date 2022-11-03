@@ -10,11 +10,13 @@ public class Camera : MonoBehaviour
 
     public Transform bg2;
 
+    public Transform siena;
+
     private float size;
 
     void Start()
     {
-        size = bg1.GetComponent<BoxCollider2D>().size.y; //kintamojo dydis backgroundo box colliderio dydzio
+        size = siena.GetComponent<BoxCollider2D>().size.y; //kintamojo dydis backgroundo box colliderio dydzio
     }
 
     void Update()

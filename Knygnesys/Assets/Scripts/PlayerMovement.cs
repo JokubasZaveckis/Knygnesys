@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
    private float dirX;
 
+
    private void Awake()
    {
         body = GetComponent<Rigidbody2D>(); //pasiima veikeja
