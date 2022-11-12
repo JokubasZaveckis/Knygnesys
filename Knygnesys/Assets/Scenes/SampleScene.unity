@@ -1416,9 +1416,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelPart_Start: {fileID: 38904379}
   levelPartList:
-  - {fileID: 4402464008259936343, guid: 7f0c5a566ce62f04db27e04bec757f2a, type: 3}
-  - {fileID: 3476220645567122607, guid: 5b12f825971312d458102fa03b26ae8e, type: 3}
   - {fileID: 551511012013420807, guid: fb4e027f7e148394aabf3b8a695b686a, type: 3}
+  - {fileID: 3476220645567122607, guid: 5b12f825971312d458102fa03b26ae8e, type: 3}
+  - {fileID: 4402464008259936343, guid: 7f0c5a566ce62f04db27e04bec757f2a, type: 3}
+  - {fileID: 1057634101107771736, guid: a0003b18adfca584e82ca20864d2294a, type: 3}
+  - {fileID: 8566944614862975934, guid: 68b5e0e7be2558d4c8d2385d385f0dae, type: 3}
+  - {fileID: 4835424879504597821, guid: 602e943e8c25e7248b4e6e95a449aeb3, type: 3}
+  - {fileID: 3137696265297005912, guid: f622a37d8acec774abdafb35b1d7fcce, type: 3}
+  - {fileID: 3320759447294627815, guid: d6f9b7a74fa72a7489fdf4a557aab72d, type: 3}
+  - {fileID: 8336426001823017269, guid: bd6edcd846a0b554f84757168cb8becc, type: 3}
+  - {fileID: 808845385221944788, guid: d4fce6b5553f444439feb9f1b59413d1, type: 3}
   player: {fileID: 2044048819}
 --- !u!4 &1222759349
 Transform:
