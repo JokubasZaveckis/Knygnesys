@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("IsJumping", false); //animacijai
         }
    }
-
+//animacijai
    private void Flip()
 	{
 		// Switch the way the player is labelled as facing.
@@ -95,4 +95,5 @@ public class PlayerMovement : MonoBehaviour
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
+//animacijai end
 }
