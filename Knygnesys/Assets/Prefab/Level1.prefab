@@ -827,6 +827,7 @@ GameObject:
   - component: {fileID: 6099492705083768059}
   - component: {fileID: 6555803674848833678}
   - component: {fileID: 2102143694637190612}
+  - component: {fileID: 2899888239720337924}
   m_Layer: 0
   m_Name: Zandaras_1
   m_TagString: Enemy
@@ -848,6 +849,7 @@ Transform:
   m_Children:
   - {fileID: 5016154597545113368}
   - {fileID: 3682230256198173512}
+  - {fileID: 315404204233695450}
   m_Father: {fileID: 551511012013420807}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -944,6 +946,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9766483, y: 4.386087}
   m_EdgeRadius: 0
+--- !u!114 &2899888239720337924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7655180275212448066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62d6779c248d7498b894ec43dbf70c0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 20
+  firePoint: {fileID: 315404204233695450}
+  bulletPrefab: {fileID: 5051104472694066959, guid: dc64d0fe78f2a439ab6b68f37af9eb77, type: 3}
+  lineRenderer: {fileID: 0}
 --- !u!1 &8235628595820212840
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,4 +992,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 392669538356371784}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8283346587745435523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 315404204233695450}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &315404204233695450
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8283346587745435523}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.11, y: -0.05, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 392669538356371784}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
