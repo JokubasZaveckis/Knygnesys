@@ -2719,7 +2719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  jump: 14
+  jump: 15
   animator: {fileID: 2044048820}
 --- !u!212 &2044048818
 SpriteRenderer:
