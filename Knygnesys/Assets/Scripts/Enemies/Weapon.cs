@@ -9,11 +9,20 @@ public class Weapon : MonoBehaviour
     public GameObject bulletPrefab;
     public LayerMask layerMask = 1;
 
+    private float timer;
+
     void Update()
     {
-        RaycastHit2D playerInfo = Physics2D.Raycast(firePoint.position, firePoint.right, range, layerMask);
-        if(playerInfo.collider != null)
+        //RaycastHit2D playerInfo = Physics2D.Raycast(firePoint.position, firePoint.right, range, layerMask);
+        timer += Time.deltaTime;
+        /*if(playerInfo.collider != null)
         {
+            Shoot();
+        }*/
+
+        if(timer>1)
+        {
+            timer = 0;
             Shoot();
         }
     }
@@ -22,4 +31,6 @@ public class Weapon : MonoBehaviour
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
+
+
 }
