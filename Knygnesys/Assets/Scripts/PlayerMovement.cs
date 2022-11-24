@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -20,6 +21,11 @@ public class PlayerMovement : MonoBehaviour
    //animacija end
 
    private float dirX;
+
+    //score system
+    public Text scoreText;
+
+    private float topScore = 0.0f;
 
 
    private void Awake()
@@ -73,6 +79,13 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true; //pakeicia busena kad veikejas yra ore (tam kad negaletu spammint space)
             animator.SetBool("IsJumping", true); //animacijai
         }
+
+        //score
+        if(body.velocity.y>0 && transform.position.y>topScore)
+        {
+            topScore = transform.position.y;
+        }
+        scoreText.text = "Score: " + Mathf.Round(topScore).ToString();
 
    }
 
