@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
         {
             topScore = transform.position.y;
         }
-        scoreText.text = "Score: " + Mathf.Round(topScore).ToString();
+        scoreText.text = "Score: " + Mathf.Round(topScore/5).ToString();
 
    }
 
