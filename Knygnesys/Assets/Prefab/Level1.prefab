@@ -187,8 +187,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822346755567382174}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 1.5, z: 0}
-  m_LocalScale: {x: 1.1073467, y: 0.22305484, z: 1.1152742}
+  m_LocalPosition: {x: 0.85, y: 1.5, z: 0}
+  m_LocalScale: {x: 2.32, y: 0.61, z: 1.1152742}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1623836920422709488}
@@ -245,8 +245,9 @@ GameObject:
   - component: {fileID: 9067369676356259169}
   - component: {fileID: 8706559592788377483}
   - component: {fileID: 3441863585471306577}
+  - component: {fileID: 8196436340560656461}
   m_Layer: 0
-  m_Name: Gyvate_1-2
+  m_Name: Gyvate
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -362,6 +363,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.6035733, y: 2.9344046}
   m_EdgeRadius: 0
+--- !u!95 &8196436340560656461
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2441035072349013291}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1aaae0a88eea94053994c3cbafb8324a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4753334397640320320
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,8 +790,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7004832737161933856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 2.3, z: 0}
-  m_LocalScale: {x: 1, y: 0.2, z: 1}
+  m_LocalPosition: {x: -1.5, y: 2.75, z: 0}
+  m_LocalScale: {x: 2.81, y: 0.52, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 392669538356371784}
@@ -828,8 +849,9 @@ GameObject:
   - component: {fileID: 6555803674848833678}
   - component: {fileID: 2102143694637190612}
   - component: {fileID: 2899888239720337924}
+  - component: {fileID: 4062137340644550819}
   m_Layer: 0
-  m_Name: Zandaras_1
+  m_Name: Zandaras
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -961,6 +983,31 @@ MonoBehaviour:
   range: 30
   firePoint: {fileID: 315404204233695450}
   bulletPrefab: {fileID: 5051104472694066959, guid: dc64d0fe78f2a439ab6b68f37af9eb77, type: 3}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  animator: {fileID: 4062137340644550819}
+  shootingDelay: 3
+--- !u!95 &4062137340644550819
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7655180275212448066}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c980bc0c830574ad284310c1098320f3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8235628595820212840
 GameObject:
   m_ObjectHideFlags: 0
