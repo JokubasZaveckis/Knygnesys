@@ -12,8 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
    private bool isJumping;
 
-   private float fallMultiplier = 4f;
-   private float lowJumpMultiplier = 3f;
+   private float fallMultiplier = 3f;
+   private float lowJumpMultiplier = 2f;
    
    //animacija start
    public Animator animator;
@@ -47,11 +47,11 @@ public class PlayerMovement : MonoBehaviour
    {
         body.velocity = new Vector2(dirX*speed, body.velocity.y); //nustato greiti ir sokimo auksti
 
-        if (body.velocity.y < 0) //jump'o feel pagerinimas (+- i mario games puse): 14-15, 47-54
+        if (body.velocity.y < 0) //jump'o feel pagerinimas (+- i mario games puse)
         {
             body.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
-        else if (body.velocity.y > 0 && !Input.GetButton ("Jump"))
+        else if (body.velocity.y > 0)
         {
             body.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
