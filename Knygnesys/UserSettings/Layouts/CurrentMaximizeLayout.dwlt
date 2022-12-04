@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 12647
+  controlID: 6849
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 12648
+  controlID: 6850
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 12649
+  controlID: 6851
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -192,9 +192,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 44bafeff2cfbffff
+      m_SelectedIDs: fc870000
+      m_LastClickedID: 34812
+      m_ExpandedIDs: b05fffff7ed6ffff2cfbffffcc5f00004a8000005c800000c2800000c2870000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -237,8 +237,8 @@ MonoBehaviour:
     y: 0
     width: 586
     height: 502
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 8}
   m_Panes:
   - {fileID: 8}
@@ -493,9 +493,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.6697128, y: 0.46316692, z: 2.1992412}
+    m_Target: {x: -3.906595, y: 0.67066044, z: 2.1762147}
     speed: 2
-    m_Value: {x: -1.6697128, y: 0.46316692, z: 2.1992412}
+    m_Value: {x: -3.906595, y: 0.67066044, z: 2.1762147}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -546,9 +546,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 19.30365
+    m_Target: 21.606323
     speed: 2
-    m_Value: 19.30365
+    m_Value: 21.606323
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -827,22 +827,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Audio/LudoLoon Studio/Tabletop Jazz Cafe
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Audio/LudoLoon Studio/Tabletop Jazz Cafe
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/naudotojas/Documents/GitHub - Repositories/Knygnesys/Knygnesys
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 122.99927}
-    m_SelectedIDs: 2aa00000
-    m_LastClickedID: 41002
-    m_ExpandedIDs: 0000000036620000386200003a6200003c6200003e6200004062000050620000586200002ca0000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 46.99951}
+    m_SelectedIDs: 0c610000
+    m_LastClickedID: 24844
+    m_ExpandedIDs: 00000000c0600000c2600000c4600000c6600000c8600000ca60000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -870,7 +870,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 92.49814}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000036620000386200003a6200003c6200003e620000506200005862000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000c0600000c2600000c4600000c6600000c8600000ca60000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -895,8 +895,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: fc870000
+    m_LastClickedInstanceID: 34812
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300009861000000000000ac8c0000d2620000
     m_RenameOverlay:
@@ -1015,7 +1015,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 300.6
+  m_LastVerticalScrollValue: 844.19995
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
