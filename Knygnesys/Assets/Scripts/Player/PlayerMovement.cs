@@ -14,6 +14,11 @@ public class PlayerMovement : MonoBehaviour
 
    private float fallMultiplier = 3f;
    private float lowJumpMultiplier = 2f;
+
+   //sound start
+   [SerializeField] private AudioSource jumpStartSoundEffect;
+   [SerializeField] private AudioSource jumpEndSoundEffect;
+   //sound end
    
    //animacija start
    public Animator animator;
@@ -81,6 +86,10 @@ public class PlayerMovement : MonoBehaviour
             body.velocity = new Vector2(body.velocity.x, jump); //veikejas kyla i virsu
             isJumping = true; //pakeicia busena kad veikejas yra ore (tam kad negaletu spammint space)
             animator.SetBool("IsJumping", true); //animacijai
+
+            //sound start
+            jumpStartSoundEffect.Play();
+            //sound end
         }
 
         //score
@@ -119,6 +128,10 @@ public class PlayerMovement : MonoBehaviour
         {
             isJumping = false; // pakeicia busena kai veikejas nusileidzia ant zemes (tam kad negaletu spammint space)
             animator.SetBool("IsJumping", false); //animacijai
+
+            //sound start
+            jumpEndSoundEffect.Play();
+            //sound end
         }
    }
 //animacijai

@@ -25,7 +25,5 @@ public class HeadDetectScript : MonoBehaviour
 
         Enemy.transform.position = new Vector3(0f, -70f, 0f);
         //Destroy(this.gameObject);
-        
-
     }
 }

@@ -14,6 +14,9 @@ public class Weapon : MonoBehaviour
     float period=0.0f;
     public int shootingDelay = 3;
     
+    //sound start
+    [SerializeField] private AudioSource gunshotSoundEffect;
+    //sound end
 
     private float timer;
 
@@ -38,6 +41,10 @@ public class Weapon : MonoBehaviour
         {
             Shoot();
             period = 0;
+
+            //sound start
+            gunshotSoundEffect.Play();
+            //sound end
         }
         period += UnityEngine.Time.deltaTime;
     }
