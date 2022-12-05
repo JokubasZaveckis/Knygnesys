@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+public class Overlays : MonoBehaviour
 {
     
     public static bool GameIsPaused = false;
+    public static bool isGameOver=false;
 
     public GameObject pauseMenuUI;
     public GameObject pauseButton;
+    public GameObject deathMenuUI;
+    public GameObject inGameScores;
+    
     
     void Update()
     {
@@ -24,11 +28,23 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
+         if(isGameOver)
+        {
+            gameOver();
+        }
     }
 
+    public void gameOver()
+    {
+        deathMenuUI.SetActive(true); 
+        inGameScores.SetActive(false);
+    }
     public void Resume()
     {
+        isGameOver = false;
+        deathMenuUI.SetActive(false); 
         pauseMenuUI.SetActive(false);
+        inGameScores.SetActive(true);
         Time.timeScale = 1f;
         GameIsPaused = false;
         pauseButton.SetActive(true);
@@ -50,6 +66,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
+        
+        
         Resume();
         SceneManager.LoadScene("SampleScene");
     }

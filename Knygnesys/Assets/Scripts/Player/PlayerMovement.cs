@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Text scoreEnd;
     public Text highScore;
+    public Text highScoreEnd;
     public int number;
 
    private void Awake()
@@ -97,8 +98,8 @@ public class PlayerMovement : MonoBehaviour
         {
             topScore = transform.position.y;
         }
-        scoreText.text = "Score: " + Mathf.Round(topScore/5).ToString();
-        scoreEnd.text = "Score: " + Mathf.Round(topScore / 5).ToString();
+        scoreText.text = Mathf.Round(topScore/5).ToString();
+        scoreEnd.text = Mathf.Round(topScore / 5).ToString();
 
         number = (int)Mathf.Round(topScore / 5); //sukastinimas
 
@@ -119,7 +120,8 @@ public class PlayerMovement : MonoBehaviour
     void UpdateHighScoreText()
     {
         int rekordas = PlayerPrefs.GetInt("HighScore", 0);
-        highScore.text = $"Highscore: {rekordas}";
+        highScore.text = $"Highscore\n{rekordas}";
+        highScoreEnd.text = $"{rekordas}";
     }
 
    void OnCollisionEnter2D(Collision2D other)

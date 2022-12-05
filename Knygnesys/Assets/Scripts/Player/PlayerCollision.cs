@@ -8,7 +8,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if(collision.transform.tag == "Enemy") //jei paliecia enemy
         {
-            PlayerManager.isGameOver = true;
+            Overlays.isGameOver = true;
             gameObject.SetActive(false);
         }
     }
