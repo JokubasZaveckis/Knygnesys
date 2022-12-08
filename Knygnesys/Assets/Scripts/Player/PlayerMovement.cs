@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
    //sound start
    [SerializeField] private AudioSource jumpStartSoundEffect;
    [SerializeField] private AudioSource jumpEndSoundEffect;
+   [SerializeField] private AudioSource highscoreSoundEffect;
+   private bool playedOnce = false;
    //sound end
    
    //animacija start
@@ -89,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("IsJumping", true); //animacijai
 
             //sound start
+
             jumpStartSoundEffect.Play();
             //sound end
         }
@@ -114,6 +117,14 @@ public class PlayerMovement : MonoBehaviour
         {
             PlayerPrefs.SetInt("HighScore", number);
             UpdateHighScoreText();
+
+            //sound start
+            if(playedOnce == false)
+            {
+                highscoreSoundEffect.Play();
+                playedOnce = true;
+            }
+            //sound end
         }
     }
 
