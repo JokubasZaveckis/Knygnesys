@@ -1,3 +1,5 @@
+using System.Net.Sockets;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +15,10 @@ public class Overlays : MonoBehaviour
     public GameObject pauseButton;
     public GameObject deathMenuUI;
     public GameObject inGameScores;
-    
+
+    //ads start
+    public AdsManager ads;
+    //ads end
     
     void Update()
     {
@@ -38,6 +43,10 @@ public class Overlays : MonoBehaviour
     {
         deathMenuUI.SetActive(true); 
         inGameScores.SetActive(false);
+
+        //ads start
+        ads.PlayAd();
+        //ads end
     }
     public void Resume()
     {

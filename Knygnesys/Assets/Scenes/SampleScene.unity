@@ -2546,6 +2546,7 @@ GameObject:
   - component: {fileID: 1050860423}
   - component: {fileID: 1050860422}
   - component: {fileID: 1050860421}
+  - component: {fileID: 1050860426}
   m_Layer: 5
   m_Name: Overlays
   m_TagString: Untagged
@@ -2569,6 +2570,7 @@ MonoBehaviour:
   pauseButton: {fileID: 159575607}
   deathMenuUI: {fileID: 64600504}
   inGameScores: {fileID: 165983844}
+  ads: {fileID: 1050860426}
 --- !u!114 &1050860422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2654,6 +2656,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1050860426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050860420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6311a468c7ab46a799cd78593e4707a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1222759347
 GameObject:
   m_ObjectHideFlags: 0
@@ -3528,6 +3542,7 @@ MonoBehaviour:
   jump: 20
   jumpStartSoundEffect: {fileID: 2044048823}
   jumpEndSoundEffect: {fileID: 2044048822}
+  highscoreSoundEffect: {fileID: 0}
   animator: {fileID: 2044048820}
   scoreText: {fileID: 1420514500}
   scoreEnd: {fileID: 615300900}
