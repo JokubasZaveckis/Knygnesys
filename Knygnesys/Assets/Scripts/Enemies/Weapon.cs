@@ -12,7 +12,7 @@ public class Weapon : MonoBehaviour
     public LayerMask layerMask = 1;
     public Animator animator;
     float period=0.0f;
-    public int shootingDelay = 3;
+    public int shootingDelay = 4;
     
     //sound start
     [SerializeField] private AudioSource gunshotSoundEffect;

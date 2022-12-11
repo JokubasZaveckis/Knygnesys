@@ -13,6 +13,8 @@ public class LevelGenerator : MonoBehaviour
 
     private Vector3 lastEndPosition;
 
+    private Transform TrinamasLevelis;
+
     private void Awake()
     {
         lastEndPosition = levelPart_Start.Find("EndPosition").position;
@@ -31,7 +33,7 @@ public class LevelGenerator : MonoBehaviour
         if(Vector3.Distance(player.position, lastEndPosition)<PLAYER_DISTANCE_SPAWN_LEVEL_PART) //kai veikejas priarteja prie kintamojo PLAYER_DISTANCE_SPAWN_LEVEL_PART reiksmes atspawnina dar viena random lygi
         {
             SpawnLevelPart();
-        } 
+        }
     }
 
     private void SpawnLevelPart()
