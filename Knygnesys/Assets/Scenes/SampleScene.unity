@@ -2699,13 +2699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelPart_Start: {fileID: 38904379}
   levelPartList:
-  - {fileID: 551511012013420807, guid: fb4e027f7e148394aabf3b8a695b686a, type: 3}
-  - {fileID: 3476220645567122607, guid: 5b12f825971312d458102fa03b26ae8e, type: 3}
-  - {fileID: 4835424879504597821, guid: 602e943e8c25e7248b4e6e95a449aeb3, type: 3}
-  - {fileID: 4835424879504597821, guid: 602e943e8c25e7248b4e6e95a449aeb3, type: 3}
-  - {fileID: 4835424879504597821, guid: 602e943e8c25e7248b4e6e95a449aeb3, type: 3}
-  - {fileID: 4835424879504597821, guid: 602e943e8c25e7248b4e6e95a449aeb3, type: 3}
-  - {fileID: 4835424879504597821, guid: 602e943e8c25e7248b4e6e95a449aeb3, type: 3}
+  - {fileID: 3320759447294627815, guid: d6f9b7a74fa72a7489fdf4a557aab72d, type: 3}
   player: {fileID: 2044048819}
 --- !u!4 &1222759349
 Transform:
