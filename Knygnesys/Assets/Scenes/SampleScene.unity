@@ -261,7 +261,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.23874074, y: 0.24412501}
   m_AnchorMax: {x: 0.76711106, y: 0.33400002}
-  m_AnchoredPosition: {x: -5.6809387, y: -2.048706}
+  m_AnchoredPosition: {x: -5.6809998, y: -2.048706}
   m_SizeDelta: {x: 4.725647, y: 6.377716}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &58441786
@@ -863,10 +863,10 @@ RectTransform:
   m_Father: {fileID: 1050860425}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.12878418, y: 805.895}
-  m_SizeDelta: {x: -0.25756836, y: -1785.6506}
+  m_AnchorMin: {x: 0, y: 0.8847502}
+  m_AnchorMax: {x: 1, y: 0.9515624}
+  m_AnchoredPosition: {x: -0.12878418, y: 3.3950195}
+  m_SizeDelta: {x: -0.25756836, y: 5.349365}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &214599507
 GameObject:
@@ -2988,10 +2988,10 @@ RectTransform:
   m_Father: {fileID: 165983847}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.9515624}
-  m_AnchoredPosition: {x: 0.12878418, y: 2.1663818}
-  m_SizeDelta: {x: -74.41703, y: 8.603409}
+  m_AnchorMin: {x: 0.7571137, y: 0}
+  m_AnchorMax: {x: 0.96485233, y: 0.8692845}
+  m_AnchoredPosition: {x: 1.4580688, y: -0.23937988}
+  m_SizeDelta: {x: -1.0756226, y: 5.7919006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1513216896
 MonoBehaviour:
@@ -3036,7 +3036,7 @@ MonoBehaviour:
     m_MinSize: 1
     m_MaxSize: 300
     m_Alignment: 8
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
@@ -4105,7 +4105,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.23874074, y: 0.056750022}
   m_AnchorMax: {x: 0.76711106, y: 0.15250002}
-  m_AnchoredPosition: {x: -6.1809387, y: -0.65405273}
+  m_AnchoredPosition: {x: -6.1809998, y: -0.65405273}
   m_SizeDelta: {x: 3.725647, y: -3.7560425}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2123146410
