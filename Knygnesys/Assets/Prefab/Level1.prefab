@@ -1134,12 +1134,12 @@ MonoBehaviour:
   range: 30
   firePoint: {fileID: 315404204233695450}
   bulletPrefab: {fileID: 5051104472694066959, guid: dc64d0fe78f2a439ab6b68f37af9eb77, type: 3}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 1
   animator: {fileID: 4062137340644550819}
   shootingDelay: 3
   gunshotSoundEffect: {fileID: 5924974454650638626}
+  minDist: 1
+  maxDist: 10
+  player: {fileID: 4044951435537673172, guid: 113426531193f0c48a5dba77066e7d2a, type: 3}
 --- !u!95 &4062137340644550819
 Animator:
   serializedVersion: 4

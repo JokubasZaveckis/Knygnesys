@@ -576,12 +576,12 @@ MonoBehaviour:
   range: 30
   firePoint: {fileID: 7986102185162302500}
   bulletPrefab: {fileID: 5051104472694066959, guid: dc64d0fe78f2a439ab6b68f37af9eb77, type: 3}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 1
   animator: {fileID: 4295061870093461333}
   shootingDelay: 3
   gunshotSoundEffect: {fileID: 528646850154747630}
+  minDist: 1
+  maxDist: 10
+  player: {fileID: 0}
 --- !u!95 &4295061870093461333
 Animator:
   serializedVersion: 4
@@ -1154,12 +1154,12 @@ MonoBehaviour:
   range: 30
   firePoint: {fileID: 4968070915499970259}
   bulletPrefab: {fileID: 5051104472694066959, guid: dc64d0fe78f2a439ab6b68f37af9eb77, type: 3}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 1
   animator: {fileID: 8238204312932592755}
   shootingDelay: 3
   gunshotSoundEffect: {fileID: 1084667965616639296}
+  minDist: 1
+  maxDist: 10
+  player: {fileID: 0}
 --- !u!95 &8238204312932592755
 Animator:
   serializedVersion: 4
@@ -1201,7 +1201,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 2
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
