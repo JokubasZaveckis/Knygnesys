@@ -9,34 +9,20 @@ public class Weapon : MonoBehaviour
     public float range;
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public LayerMask layerMask = 1;
     public Animator animator;
     float period=0.0f;
     public int shootingDelay = 4;
     
     //sound start
     [SerializeField] private AudioSource gunshotSoundEffect;
+    public float minDist=1;
+    public float maxDist=10;
     //sound end
 
     private float timer;
 
     void Update()
     {
-        //RaycastHit2D playerInfo = Physics2D.Raycast(firePoint.position, firePoint.right, range, layerMask);
-
-        // timer += Time.deltaTime;
-
-        /*if(playerInfo.collider != null)
-        {
-            Shoot();
-        }*/
-
-        // if(timer>1)
-        // {
-        //     timer = 0;
-        //     Shoot();
-        // }
-
         if (period>shootingDelay)
         {
             Shoot();
@@ -47,6 +33,22 @@ public class Weapon : MonoBehaviour
             //sound end
         }
         period += UnityEngine.Time.deltaTime;
+
+
+        // float dist = Vector2.Distance(transform.position, reikiaPlayerioPozicijosarbaCamera.position);
+ 
+        // if(dist < minDist)
+        // {
+        //     gunshotSoundEffect.volume = 1;
+        // }
+        // else if(dist > maxDist)
+        // {
+        //     gunshotSoundEffect.volume = 0;
+        // }
+        // else
+        // {
+        //     gunshotSoundEffect.volume = 1 - ((dist - minDist) / (maxDist - minDist));
+        // }
     }
     
     void Shoot()
@@ -55,7 +57,5 @@ public class Weapon : MonoBehaviour
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         animator.SetBool("isShooting", false);
     }
-
-   
 
 }
