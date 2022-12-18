@@ -1751,6 +1751,7 @@ MonoBehaviour:
   bg1: {fileID: 1717700005}
   bg2: {fileID: 555774060}
   siena: {fileID: 2075034607}
+  outline: {fileID: 1717700004}
 --- !u!81 &519420034
 AudioListener:
   m_ObjectHideFlags: 0
