@@ -1139,7 +1139,6 @@ MonoBehaviour:
   gunshotSoundEffect: {fileID: 5924974454650638626}
   minDist: 1
   maxDist: 10
-  player: {fileID: 4044951435537673172, guid: 113426531193f0c48a5dba77066e7d2a, type: 3}
 --- !u!95 &4062137340644550819
 Animator:
   serializedVersion: 4
@@ -1181,9 +1180,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 25
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -1216,7 +1215,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

@@ -505,12 +505,11 @@ MonoBehaviour:
   range: 30
   firePoint: {fileID: 7419958315628750960}
   bulletPrefab: {fileID: 5051104472694066959, guid: dc64d0fe78f2a439ab6b68f37af9eb77, type: 3}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 1
   animator: {fileID: 4423954227378078641}
   shootingDelay: 3
   gunshotSoundEffect: {fileID: 1988320995037930585}
+  minDist: 1
+  maxDist: 10
 --- !u!95 &4423954227378078641
 Animator:
   serializedVersion: 4
@@ -552,9 +551,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 25
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -587,7 +586,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -909,12 +908,11 @@ MonoBehaviour:
   range: 30
   firePoint: {fileID: 4441086889931423865}
   bulletPrefab: {fileID: 5051104472694066959, guid: dc64d0fe78f2a439ab6b68f37af9eb77, type: 3}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 1
   animator: {fileID: 215738958719871566}
   shootingDelay: 3
   gunshotSoundEffect: {fileID: 454338883671093357}
+  minDist: 1
+  maxDist: 10
 --- !u!95 &215738958719871566
 Animator:
   serializedVersion: 4
@@ -956,9 +954,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 25
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -991,7 +989,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1481,12 +1479,11 @@ MonoBehaviour:
   range: 30
   firePoint: {fileID: 3812718130481136737}
   bulletPrefab: {fileID: 5051104472694066959, guid: dc64d0fe78f2a439ab6b68f37af9eb77, type: 3}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 1
   animator: {fileID: 7999752158290438989}
   shootingDelay: 3
   gunshotSoundEffect: {fileID: 4478396143152679494}
+  minDist: 1
+  maxDist: 10
 --- !u!95 &7999752158290438989
 Animator:
   serializedVersion: 4
@@ -1528,9 +1525,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 25
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -1563,7 +1560,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
