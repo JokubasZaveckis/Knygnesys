@@ -1,3 +1,4 @@
+using System.Reflection;
 using System.Net.Sockets;
 using System;
 using System.Collections;
@@ -9,17 +10,17 @@ public class Overlays : MonoBehaviour
 {
     
     public static bool GameIsPaused = false;
-    public static bool isGameOver=false;
+    public static bool isGameOver = false;
 
     public GameObject pauseMenuUI;
     public GameObject pauseButton;
     public GameObject deathMenuUI;
     public GameObject inGameScores;
 
-    //ads start
-    public AdsManager ads;
-    //ads end
-    
+    [SerializeField] InterstitialAd interstitialAd;
+    private static bool playedAd = false;
+
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -33,11 +34,14 @@ public class Overlays : MonoBehaviour
                 Pause();
             }
         }
-         if(isGameOver)
+        
+        if(isGameOver)
         {
-            //ads start
-            ads.PlayAd();
-            //ads end
+            if(!playedAd)
+            {
+                interstitialAd.ShowAd();
+                playedAd = true;
+            }
             gameOver();
         }
     }
@@ -46,6 +50,7 @@ public class Overlays : MonoBehaviour
     {
         deathMenuUI.SetActive(true); 
         inGameScores.SetActive(false);
+
     }
     public void Resume()
     {
