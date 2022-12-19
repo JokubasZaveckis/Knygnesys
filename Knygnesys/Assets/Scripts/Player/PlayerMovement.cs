@@ -96,6 +96,18 @@ public class PlayerMovement : MonoBehaviour
             //sound end
         }
 
+        if(Input.GetMouseButtonDown(0) && !isJumping) //jei paspaudzia space
+        {
+            body.velocity = new Vector2(body.velocity.x, jump); //veikejas kyla i virsu
+            isJumping = true; //pakeicia busena kad veikejas yra ore (tam kad negaletu spammint space)
+            animator.SetBool("IsJumping", true); //animacijai
+
+            //sound start
+
+            jumpStartSoundEffect.Play();
+            //sound end
+        }
+
         //score
         if(body.velocity.y>0 && transform.position.y>topScore)
         {

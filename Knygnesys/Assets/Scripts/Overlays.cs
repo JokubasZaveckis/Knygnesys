@@ -35,6 +35,9 @@ public class Overlays : MonoBehaviour
         }
          if(isGameOver)
         {
+            //ads start
+            ads.PlayAd();
+            //ads end
             gameOver();
         }
     }
@@ -43,10 +46,6 @@ public class Overlays : MonoBehaviour
     {
         deathMenuUI.SetActive(true); 
         inGameScores.SetActive(false);
-
-        //ads start
-        ads.PlayAd();
-        //ads end
     }
     public void Resume()
     {
@@ -75,8 +74,6 @@ public class Overlays : MonoBehaviour
 
     public void Restart()
     {
-        
-        
         Resume();
         SceneManager.LoadScene("SampleScene");
     }
