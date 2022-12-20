@@ -17,9 +17,11 @@ public class Overlays : MonoBehaviour
     public GameObject deathMenuUI;
     public GameObject inGameScores;
 
+    //ads start
     [SerializeField] InterstitialAd interstitialAd;
     private static bool playedAd = false;
-
+    //ads end
+    
 
     void Update()
     {
@@ -75,13 +77,17 @@ public class Overlays : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
         Resume();
+        //ads start
+        playedAd = false;
+        //ads end
     }
 
     public void Restart()
     {
         Resume();
         SceneManager.LoadScene("SampleScene");
+        //ads start
+        playedAd = false;
+        //ads end
     }
-
-    
 }
