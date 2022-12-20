@@ -39,11 +39,15 @@ public class PlayerMovement : MonoBehaviour
     public Text highScoreEnd;
     public int number;
 
+    //jump
+    private float jumpTimer;
+
    private void Awake()
    {
         body = GetComponent<Rigidbody2D>(); //pasiima veikeja
         localScale = transform.localScale;
         dirX = 1F; //nustato judejimo krypi pradzioje
+        jumpTimer = 0f;
    }
 
    private void OnTriggerEnter2D(Collider2D collision)
@@ -91,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("IsJumping", true); //animacijai
 
             //sound start
-
+            
             jumpStartSoundEffect.Play();
             //sound end
         }
@@ -106,6 +110,8 @@ public class PlayerMovement : MonoBehaviour
 
             jumpStartSoundEffect.Play();
             //sound end
+
+            jumpTimer=0f;
         }
 
         //score
@@ -119,6 +125,14 @@ public class PlayerMovement : MonoBehaviour
         number = (int)Mathf.Round(topScore / 5); //sukastinimas
 
         CheckHighScore();
+
+        jumpTimer+=Time.deltaTime;
+        if(jumpTimer>=1f)
+        {
+            jumpTimer=0;
+            isJumping=false;
+            animator.SetBool("IsJumping", false);
+        }
 
     }
 
@@ -149,10 +163,11 @@ public class PlayerMovement : MonoBehaviour
 
    void OnCollisionEnter2D(Collision2D other)
    {
-        if(other.gameObject.CompareTag("Ground")) //jei paliecia zeme
+        if(other.gameObject.CompareTag("Ground") && jumpTimer>=1f) //jei paliecia zeme
         {
             isJumping = false; // pakeicia busena kai veikejas nusileidzia ant zemes (tam kad negaletu spammint space)
             animator.SetBool("IsJumping", false); //animacijai
+            jumpTimer=0f;
 
             //sound start
             jumpEndSoundEffect.Play();
