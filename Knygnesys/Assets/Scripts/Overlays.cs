@@ -42,6 +42,7 @@ public class Overlays : MonoBehaviour
             if(!playedAd)
             {
                 interstitialAd.ShowAd();
+                interstitialAd.LoadAd();
                 playedAd = true;
             }
             gameOver();
