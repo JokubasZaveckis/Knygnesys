@@ -111,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
             jumpStartSoundEffect.Play();
             //sound end
 
-            jumpTimer=0f;
+            //jumpTimer=0f;
         }
 
         //score
@@ -127,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
         CheckHighScore();
 
         jumpTimer+=Time.deltaTime;
-        if(jumpTimer>=1f)
+        if(jumpTimer>=1f && !isJumping)
         {
             jumpTimer=0;
             isJumping=false;
