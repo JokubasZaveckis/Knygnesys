@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
@@ -47,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         body = GetComponent<Rigidbody2D>(); //pasiima veikeja
         localScale = transform.localScale;
         dirX = 1F; //nustato judejimo krypi pradzioje
-        jumpTimer = 0f;
+        // jumpTimer = 0f;
    }
 
    private void OnTriggerEnter2D(Collider2D collision)
@@ -100,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
             //sound end
         }
 
-        if(Input.GetMouseButtonDown(0) && !isJumping) //jei paspaudzia space
+        if(Input.GetKey(KeyCode.Mouse0) && !isJumping) //jei paspaudzia space
         {
             body.velocity = new Vector2(body.velocity.x, jump); //veikejas kyla i virsu
             isJumping = true; //pakeicia busena kad veikejas yra ore (tam kad negaletu spammint space)
@@ -126,13 +127,13 @@ public class PlayerMovement : MonoBehaviour
 
         CheckHighScore();
 
-        jumpTimer+=Time.deltaTime;
-        if(jumpTimer>=1f && !isJumping)
-        {
-            jumpTimer=0;
-            isJumping=false;
-            animator.SetBool("IsJumping", false);
-        }
+        // jumpTimer+=Time.deltaTime;
+        // if(jumpTimer>=1f && !isJumping)
+        // {
+        //     jumpTimer=0;
+        //     isJumping=false;
+        //     animator.SetBool("IsJumping", false);
+        // }
 
     }
 
@@ -163,7 +164,7 @@ public class PlayerMovement : MonoBehaviour
 
    void OnCollisionEnter2D(Collision2D other)
    {
-        if(other.gameObject.CompareTag("Ground") && jumpTimer>=1f) //jei paliecia zeme
+        if(other.gameObject.CompareTag("Ground")) //jei paliecia zeme      && jumpTimer>=1f
         {
             isJumping = false; // pakeicia busena kai veikejas nusileidzia ant zemes (tam kad negaletu spammint space)
             animator.SetBool("IsJumping", false); //animacijai
